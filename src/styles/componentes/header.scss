@@ -1,0 +1,24 @@
+@import "../vars.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100%;
+  height: $nav-height;
+  background-color: $navy;
+  backdrop-filter: blur(10px);
+  transition: $transition;
+  font-family: $font-mono;
+  display: flex;
+  align-items: center;
+  color: var(--lightest-slate);
+
+  @media (max-width: 1080px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
+}
