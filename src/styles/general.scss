@@ -11,7 +11,7 @@
 }
 
 :focus {
-  outline: 2px dashed green;
+  outline: 2px dashed $purple;
   outline-offset: 3px;
 }
 
@@ -158,9 +158,9 @@ h6 {
     counter-increment: section;
     content: "0" counter(section) ".";
     margin-right: 10px;
-    color: $green;
+    color: $purple;
     font-family: $font-mono;
-    font-size: clamp($fz-md), 3vw, $fz-xl;
+    font-size: clamp($fz-md, 3vw, $fz-xl);
     font-weight: 400;
 
     @media (max-width: 480px) {
@@ -225,7 +225,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $green;
+    color: $purple;
   }
 
   // &.inline-link {
@@ -263,9 +263,9 @@ p {
     margin: 0;
   }
 
-  & > a {
-    // ${({ theme }) => theme.mixins.inlineLink};
-  }
+  // & > a {
+  //   // ${({ theme }) => theme.mixins.inlineLink};
+  // }
 
   & > code {
     background-color: $light-navy;
@@ -290,7 +290,7 @@ ul {
         content: "▹";
         position: absolute;
         left: 0;
-        color: $green;
+        color: $purple;
       }
     }
   }
@@ -348,19 +348,19 @@ code {
   }
 }
 
-#logo {
+.logo {
   color: $purple;
 }
 
 .overline {
-  color: $green;
+  color: $purple;
   font-family: $font-mono;
   font-size: $fz-md;
   font-weight: 400;
 }
 
 .subtitle {
-  color: $green;
+  color: $purple;
   margin: 0 0 20px 0;
   font-size: $fz-md;
   font-family: $font-mono;
@@ -383,7 +383,7 @@ code {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
-  color: $green;
+  color: $purple;
 
   .arrow {
     display: block;
@@ -404,4 +404,36 @@ code {
 
 .gatsby-image-outer-wrapper {
   height: 100%;
+}
+
+.button {
+  color: $purple;
+  background-color: transparent;
+  border: 1px solid $purple;
+  border-radius: $border-radius;
+  font-size: $fz-xs;
+  font-family: $font-mono;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $transition;
+  padding: 1.25rem 1.75rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $green-tint;
+    outline: none;
+  }
+  &:after {
+    display: none !important;
+  }
+}
+
+.button--small {
+  padding: 0.75rem 1rem;
+}
+
+.button--big {
+  font-size: $fz-sm;
 }

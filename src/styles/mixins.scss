@@ -1,0 +1,99 @@
+@import "./vars.scss";
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin link {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: $transition;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $purple;
+    outline: 0;
+  }
+}
+
+@mixin inlineLink {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: $transition;
+  color: $purple;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $purple;
+    outline: 0;
+    &:after {
+      width: 100%;
+    }
+    & > * {
+      color: $purple !important;
+      transition: $transition;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: $purple;
+    transition: $transition;
+    opacity: 0.5;
+  }
+}
+
+@mixin smallButton {
+  padding: 0.75rem 1rem;
+}
+
+@mixin boxShadow {
+  box-shadow: 0 10px 30px -15px $navy-shadow;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 20px 30px -15px $navy-shadow;
+  }
+}
+
+@mixin fancyList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: $fz-lg;
+  li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    &:before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: $purple;
+    }
+  }
+}
+
+@mixin resetList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

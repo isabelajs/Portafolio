@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { navLinks } from '@config';
 import { IconLogo } from '@components/icons';
+// import { Menu } from '@components'
 import '../styles/componentes/header.scss';
 
 const Header = () => {
   const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank">
+    <a className=" button button--small" href="/resume.pdf" target="_blank">
       Curriculum
     </a>
   );
@@ -13,9 +15,24 @@ const Header = () => {
 
   return (
     <div className="header">
+
       <Link to='/'>
         <IconLogo />
       </Link>
+
+      <nav className='styledLinks'>
+        <ol>
+          {navLinks &&
+            navLinks.map(({ url, name }, i) => (
+              <li key={i}>
+                <Link to={url}>{name}</Link>
+              </li>
+            ))}
+        </ol>
+        <div>{ResumeLink}</div>
+      </nav>
+
+      {/* <Menu/> */}
 
     </div>
 
