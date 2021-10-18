@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { navLinks } from '@config';
 import { IconLogo } from '@components/icons';
 import { Menu } from '@components'
-import '../styles/componentes/header.scss';
+import '../styles/components/header.scss';
 
 const Header = () => {
   const ResumeLink = (
