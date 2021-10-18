@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
 import { IconLogo } from '@components/icons';
-// import { Menu } from '@components'
+import { Menu } from '@components'
 import '../styles/componentes/header.scss';
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
         <IconLogo />
       </Link>
 
-      <nav className='styledLinks'>
+      <nav aria-label='' tabIndex='' className='styledLinks'>
         <ol>
           {navLinks &&
             navLinks.map(({ url, name }, i) => (
@@ -32,7 +32,7 @@ const Header = () => {
         <div>{ResumeLink}</div>
       </nav>
 
-      {/* <Menu/> */}
+      <Menu />
 
     </div>
 
