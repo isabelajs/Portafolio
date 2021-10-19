@@ -1,14 +1,21 @@
 import React from "react";
-import { Layout, Header, Footer } from "@components";
-import "../styles/components/layout.scss";
 import "../styles/general.scss";
+import {
+  Layout,
+  Hero,
+  About,
+  Jobs,
+  Featured,
+  Projects,
+  Contact,
+} from "@components";
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <div className="layout">
-      <Header />
-      <Footer />
-    </div>
+    <Layout location={location}>
+      <Hero />
+      <About />
+    </Layout>
   );
 };
 

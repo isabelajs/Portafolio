@@ -3,19 +3,16 @@
 
 .header {
   @include flexBetween;
-  // position: fixed;
+  position: fixed;
   top: 0;
   padding: 0px 50px;
   width: 100%;
   height: $nav-height;
-  background-color: $navy;
+  background-color: rgba(10, 25, 47, 0.85);
   transition: $transition;
   font-family: $font-mono;
   color: $lightest-slate;
   z-index: 11;
-  filter: none !important;
-  pointer-events: auto !important;
-  user-select: auto !important;
   backdrop-filter: blur(10px);
 
   @media (max-width: 1080px) {
