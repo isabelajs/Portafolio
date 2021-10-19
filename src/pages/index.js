@@ -15,6 +15,7 @@ const IndexPage = ({ location }) => {
     <Layout location={location}>
       <Hero />
       <About />
+      <Jobs />
     </Layout>
   );
 };
