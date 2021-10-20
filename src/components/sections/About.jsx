@@ -1,7 +1,5 @@
 import React, { useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
 import '../../styles/components/sections/about.scss'
 
 export default function About() {
