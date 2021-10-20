@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://isajs.netlify.app",
     title: "Isabela Jimenez",
   },
   plugins: [

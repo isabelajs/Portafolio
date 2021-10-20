@@ -4,6 +4,14 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+backend:
+  name: github
+  repo: isabelajs/Portafolio
+  branch: main
+
+media_folder: static/assets
+public_folder: /static/assets
+
 
 collections:
   - name: "blog"
