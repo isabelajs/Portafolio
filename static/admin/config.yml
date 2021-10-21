@@ -7,18 +7,24 @@ media_folder: static/assets
 public_folder: /static/assets
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "jobs"
+    label: "Jobs"
+    folder: "content/job"
     create: true
     slug: "index"
-    media_folder: ""
-    public_folder: ""
+    media_folder: "assets"
+    public_folder: "assets"
     path: "{{title}}/index"
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Company", name: "company", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Range", name: "range", widget: "string" }
+      - { label: "Url", name: "url", widget: "string" }
+      - label: "Activities"
+        name: "activities"
+        widget: "list"
+        fields:
+          - { label: "Activity", name: "activity", widget: "string" }
