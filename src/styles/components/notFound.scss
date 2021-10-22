@@ -3,6 +3,7 @@
 
 .mainContainer {
   @include flexCenter;
+  margin-top: 100px;
   flex-direction: column;
   .title {
     color: $purple;
