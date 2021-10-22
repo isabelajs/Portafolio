@@ -1,0 +1,20 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.mainContainer {
+  @include flexCenter;
+  flex-direction: column;
+  .title {
+    color: $purple;
+    font-family: $font-mono;
+    font-size: clamp(100px, 25vw, 200px);
+    line-height: 1;
+  }
+  .subtitle {
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: 400;
+  }
+  .button {
+    margin-top: 40px;
+  }
+}
