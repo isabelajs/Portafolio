@@ -28,3 +28,24 @@ collections:
         widget: "list"
         fields:
           - { label: "Activity", name: "activity", widget: "string" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "index"
+    media_folder: "assets"
+    public_folder: "assets"
+    path: "{{title}}/index"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Imagen", name: "image", choose_url: false, widget: "image" }
+      - { label: "Github", name: "github", widget: "string" }
+      - { label: "External", name: "external", widget: "string" }
+      - label: "Tecnologies"
+        name: "tecnologies"
+        widget: "list"
+        field: { label: "Tecnology", name: "tecnology", widget: "string" }

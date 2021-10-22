@@ -59,7 +59,6 @@ export default function Jobs() {
         <div className="tabPanels">
           {
             jobsData.map((node, i) => {
-              console.log(node)
               const { title, url, company, range, activities } = node.frontmatter
               return (
                 <div
