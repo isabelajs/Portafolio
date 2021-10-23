@@ -57,6 +57,33 @@
         }
       }
 
+      .highLight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 2px;
+        height: $tab-height;
+        border-radius: $border-radius;
+        background: $purple;
+        // transform: translateY(calc(1 * $tab-height));
+        transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition-delay: 0.1s;
+
+        @media (max-width: 600px) {
+          top: auto;
+          bottom: 0;
+          width: 100%;
+          max-width: $tab-width;
+          height: 2px;
+          margin-left: 50px;
+          // transform: translateX(calc(${({ activeTabId }) => activeTabId} * $tab-width));
+        }
+        @media (max-width: 480px) {
+          margin-left: 25px;
+        }
+      }
+
       .tabButton {
         @include link;
         display: flex;
@@ -71,8 +98,17 @@
         text-align: left;
         white-space: nowrap;
         color: $slate;
+        min-width: min-content;
+
         .active {
           color: $purple;
+          border-bottom: 2px solid $purple;
+
+          @media (max-width: 600px) {
+            @include flexCenter;
+            border-bottom: 0;
+            border-left: 2px solid $purple;
+          }
         }
 
         @media (max-width: 768px) {
