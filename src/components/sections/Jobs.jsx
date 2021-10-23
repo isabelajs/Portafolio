@@ -53,7 +53,7 @@ export default function Jobs() {
               )
             })
           }
-          <div className='highLight' activeTabId={activeTabId}></div>
+
         </div>
 
         <div className="tabPanels">
