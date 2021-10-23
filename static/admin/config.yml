@@ -14,13 +14,12 @@ collections:
     slug: "index"
     media_folder: "assets"
     public_folder: "assets"
-    path: "{{title}}/index"
+    path: "{{company}}/index"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "TitleJob", name: "title", widget: "string" }
       - { label: "Company", name: "company", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Range", name: "range", widget: "string" }
       - { label: "Url", name: "url", widget: "string" }
       - label: "Activities"

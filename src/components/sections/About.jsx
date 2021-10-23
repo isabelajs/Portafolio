@@ -4,7 +4,7 @@ import '../../styles/components/sections/about.scss';
 
 export default function About() {
   const revealContainer = useRef(null);
-  const skills = ['JavaScript (ES6+)', 'React', 'Html', 'Css', 'Sass', 'Firebase'];
+  const skills = ['JavaScript (ES6+)', 'React', 'Html', 'Sass', 'Firebase', 'Gatsby', 'Node.js'];
 
   return (
     <section className='aboutSection' id='about' ref={revealContainer}>
@@ -15,17 +15,16 @@ export default function About() {
           <div>
             <p>
               ¡Hola! Mi nombre es Isabela Jimenez, soy Ingeniera Industrial de la Universidad Antonio Nariño,
-              Grado Magna Cum Laude en mi titulación al tener uno de los mejores promedios académicos, además
-              soy Desarrolladora Frontend de manera autodidacta.
+              Grado Magna Cum Laude, y Desarrolladora Frontend.
             </p>
 
             <p>
               Inicie en el mundo de la programación a finales del año 2020,
               creando una tienda simple para mi emprendimiento{' '}
               <a href="https://www.instagram.com/5eonn/">5EON</a>,{' '}
-              desde allí comencé a estudiar de manera autodidacta,
-              apoyándome de plataformas como Platzi y YouTube, además del apoyo de la comunidad. He avanzado rápidamente y
-              he tenido el privilegio de trabajar en equipo como Freelancer para diferentes empresas.
+              desde allí comencé a estudiar apoyándome de plataformas como Platzi y YouTube, además del apoyo de la comunidad. De igual manera,
+              hice parte de carrera de Inteligencia Artificial MinTic-Icetex.
+              Esto me ha permitido tener el privilegio de trabajar en equipo como Freelancer para diferentes empresas.
             </p>
 
             <p>
