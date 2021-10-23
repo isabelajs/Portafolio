@@ -1,4 +1,5 @@
 @import "./vars.scss";
+@import "./mixins.scss";
 
 * {
   box-sizing: border-box;
@@ -228,9 +229,9 @@ a {
     color: $purple;
   }
 
-  // &.inline-link {
-  //   ${({ theme }) => theme.mixins.inlineLink};
-  // }
+  &.inline-link {
+    @include inlineLink;
+  }
 }
 
 button {
@@ -263,9 +264,9 @@ p {
     margin: 0;
   }
 
-  // & > a {
-  //   // ${({ theme }) => theme.mixins.inlineLink};
-  // }
+  & > a {
+    @include inlineLink;
+  }
 
   & > code {
     background-color: $light-navy;
@@ -325,29 +326,6 @@ code {
   font-size: $fz-md;
 }
 
-.skip-to-content {
-  // ${({ theme }) => theme.mixins.button};
-  position: absolute;
-  top: auto;
-  left: -999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: -99;
-
-  &:focus,
-  &:active {
-    background-color: $purple;
-    color: $navy;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    z-index: 99;
-  }
-}
-
 .logo {
   color: $purple;
 }
@@ -374,7 +352,7 @@ code {
   }
 
   a {
-    // ${({ theme }) => theme.mixins.inlineLink};
+    @include inlineLink;
     line-height: 1.5;
   }
 }
@@ -392,7 +370,7 @@ code {
   }
 
   a {
-    // ${({ theme }) => theme.mixins.inlineLink};
+    @include inlineLink;
     font-family: $font-mono;
     font-size: $fz-sm;
     font-weight: 600;
