@@ -14,7 +14,12 @@ export default function Projects() {
             title
             image {
               childImageSharp {
-                gatsbyImageData(width: 700, placeholder: BLURRED)
+                gatsbyImageData(
+                  width: 700
+                  placeholder: BLURRED
+                  aspectRatio: 1.8
+                  transformOptions: {fit: FILL}
+                )
               }
             }
             description
@@ -43,15 +48,14 @@ export default function Projects() {
             const { title, external, github, description, image, tecnologies } = node.frontmatter
             const img = getImage(image);
 
-            console.log(description)
             return (
               <li className="project" key={i} ref={el => (revealProjects.current[i] = el)} >
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    <p className="project-overline">Proyectos destacados</p>
 
                     <h3 className="project-title">
-                      <a href={external}>{title}</a>
+                      <a target='_blank' href={external}>{title}</a>
                     </h3>
 
                     <div className="project-description">{description}</div>
@@ -66,12 +70,12 @@ export default function Projects() {
 
                     <div className="project-links">
                       {github && (
-                        <a href={github} aria-label="GitHub Link">
+                        <a target="_blank" href={github} aria-label="GitHub Link">
                           <Icon name="GitHub" />
                         </a>
                       )}
                       {external && (
-                        <a href={external} aria-label="External Link" className="external">
+                        <a target="_blank" href={external} aria-label="External Link" className="external">
                           <Icon name="External" />
                         </a>
                       )}
@@ -84,7 +88,7 @@ export default function Projects() {
 
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a target="_blank" href={external ? external : github ? github : '#'}>
                     <GatsbyImage image={img} alt={title} className="img" />
                   </a>
                 </div>
