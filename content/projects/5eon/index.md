@@ -1,6 +1,6 @@
 ---
 title: 5EON
-description: Diseñamos y construimos una página web responsive para un
+description: Diseñamos y desarrollamos una página web responsive para un
   emprendimiento que transforma el plástico reciclado en piezas de decoración de
   tipo mural.
 image: assets/landingpage-home.png
