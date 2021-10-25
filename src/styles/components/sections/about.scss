@@ -2,7 +2,7 @@
 @import "../../mixins.scss";
 
 .aboutSection {
-  // max-width: 900px;
+  will-change: opacity;
 
   .inner {
     display: grid;
@@ -71,15 +71,15 @@
 
           .img {
             filter: none;
-            // mix-blend-mode: normal;
+            mix-blend-mode: normal;
           }
         }
 
         .img {
           position: relative;
           border-radius: $border-radius;
-          // mix-blend-mode: multiply;
-          // filter: grayscale(100%) contrast(1);
+          mix-blend-mode: multiply;
+          filter: grayscale(100%) contrast(1);
           transition: $transition;
         }
 
@@ -98,7 +98,7 @@
           top: 0;
           left: 0;
           background-color: $navy;
-          // mix-blend-mode: screen;
+          mix-blend-mode: screen;
         }
 
         &:after {
