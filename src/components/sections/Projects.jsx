@@ -51,44 +51,44 @@ export default function Projects() {
             return (
               <li className="project" key={i} ref={el => (revealProjects.current[i] = el)} >
                 <div className="project-content">
-                  <div>
-                    <p className="project-overline">Proyectos destacados</p>
 
-                    <h3 className="project-title">
-                      <a target='_blank' href={external}>{title}</a>
-                    </h3>
+                  <p className="project-overline">Proyectos destacados</p>
 
-                    <div className="project-description">{description}</div>
+                  <h3 className="project-title">
+                    <a target='_blank' rel="noreferrer" href={external}>{title}</a>
+                  </h3>
 
-                    {tecnologies.length && (
-                      <ul className="project-tech-list">
-                        {tecnologies.map((tech, i) => (
-                          <li key={i}>{tech}</li>
-                        ))}
-                      </ul>
+                  <div className="project-description">{description}</div>
+
+                  {tecnologies.length && (
+                    <ul className="project-tech-list">
+                      {tecnologies.map((tech, i) => (
+                        <li key={i}>{tech}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="project-links">
+                    {github && (
+                      <a target="_blank" rel="noreferrer" href={github} aria-label="GitHub Link">
+                        <Icon name="GitHub" />
+                      </a>
                     )}
-
-                    <div className="project-links">
-                      {github && (
-                        <a target="_blank" href={github} aria-label="GitHub Link">
-                          <Icon name="GitHub" />
-                        </a>
-                      )}
-                      {external && (
-                        <a target="_blank" href={external} aria-label="External Link" className="external">
-                          <Icon name="External" />
-                        </a>
-                      )}
-                    </div>
-
+                    {external && (
+                      <a target="_blank" href={external} rel="noreferrer" aria-label="External Link" className="external">
+                        <Icon name="External" />
+                      </a>
+                    )}
                   </div>
+
+
                 </div>
 
 
 
 
                 <div className="project-image">
-                  <a target="_blank" href={external ? external : github ? github : '#'}>
+                  <a target="_blank" rel="noreferrer" href={external ? external : github ? github : '#'}>
                     <GatsbyImage image={img} alt={title} className="img" />
                   </a>
                 </div>

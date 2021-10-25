@@ -21,7 +21,7 @@ export default function About() {
             <p>
               Inicie en el mundo de la programación a finales del año 2020,
               creando una tienda simple para mi emprendimiento{' '}
-              <a href="https://www.instagram.com/5eonn/" target="_blank" >5EON</a>,{' '}
+              <a href="https://www.instagram.com/5eonn/" target="_blank" rel="noreferrer" >5EON</a>,{' '}
               desde allí comencé a estudiar apoyándome de plataformas como Platzi y YouTube, además del apoyo de la comunidad. De igual manera,
               hice parte de carrera de Inteligencia Artificial MinTic-Icetex.
               Esto me ha permitido tener el privilegio de trabajar en equipo como Freelancer para diferentes empresas.
