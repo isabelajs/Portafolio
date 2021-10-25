@@ -6,6 +6,7 @@ image: assets/mercampo.jpg
 github: https://github.com/isabelajs/Mercampo
 external: https://alcampo.netlify.app
 tecnologies:
-  - Firebase
   - React
+  - Redux
+  - Firebase
 ---

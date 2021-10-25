@@ -19,7 +19,7 @@ export default function About() {
             </p>
 
             <p>
-              Inicie en el mundo de la programación a finales del año 2020,
+              Inicié en el mundo de la programación a finales del año 2020,
               creando un ecommerce para mi emprendimiento{' '}
               <a href="https://www.instagram.com/5eonn/" target="_blank" rel="noreferrer" >5EON</a>,{' '}
               desde allí comencé a estudiar apoyándome de plataformas como Platzi y YouTube, además del apoyo de la comunidad. De igual manera,
