@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
 import { useOnClickOutside } from '@hooks';
-import { Helmet } from 'react-helmet'
 import '../styles/components/menu.scss';
 
 const a = 2
@@ -10,15 +9,18 @@ const a = 2
 const Menu = () => {
   const wrapperRef = useRef();
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  useOnClickOutside(wrapperRef, () => setMenuOpen(false))
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+    document.body.classList.toggle('blur')
+  };
+
+
+  useOnClickOutside(wrapperRef, (e) => {
+    setMenuOpen(false)
+  })
 
   return (
     <div ref={wrapperRef} className="styledMenu">
-
-      <Helmet>
-        <body className={menuOpen ? 'blur' : ''} />
-      </Helmet>
 
       <div
         className='hamburguerButton'
