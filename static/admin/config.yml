@@ -22,6 +22,7 @@ collections:
       - { label: "Company", name: "company", widget: "string" }
       - { label: "Range", name: "range", widget: "string" }
       - { label: "Url", name: "url", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime" }
       - label: "Activities"
         name: "activities"
         widget: "list"
@@ -41,6 +42,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Imagen", name: "image", choose_url: false, widget: "image" }
       - { label: "Github", name: "github", widget: "string" }
       - { label: "External", name: "external", widget: "string" }

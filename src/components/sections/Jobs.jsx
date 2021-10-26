@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from 'gatsby';
 import '../../styles/components/sections/jobs.scss'
 
 export default function Jobs() {
-  const revealContainer = useRef(null);
   const data = useStaticQuery(graphql`
     query MyQuery {
-      jobs: allMdx(filter: {fileAbsolutePath: {regex: "/job/"}}) {
+      jobs: allMdx(filter: {fileAbsolutePath: {regex: "/job/"}}
+      sort: {fields: frontmatter___date}) {
         nodes {
           id
           frontmatter {
@@ -23,31 +23,27 @@ export default function Jobs() {
       }
     }  
   `);
-  const jobsData = data.jobs.nodes;
-  const tabs = useRef([]);
-  const [activeTabId, setActiveTabId] = useState(0);
+
+  const jobsData = [...data.jobs.nodes];
+  const [activatedJob, setActivatedJob] = useState(0);
 
   return (
-    <section id="jobs" className='jobs' ref={revealContainer}>
+    <section id="jobs" className='jobs'>
       <h2 className="numbered-heading">Dónde he trabajado</h2>
 
       <div className="inner">
 
         <div className="tabList" role="tablist" aria-label="Job tabs">
           {jobsData &&
-            jobsData.map((node, i) => {
+            jobsData.reverse().map((node) => {
+
               const { company } = node.frontmatter;
               return (
                 <button
-                  key={i}
-                  className={`tabButton ${activeTabId === i ? 'active' : ''} `}
-                  onClick={() => setActiveTabId(i)}
-                  ref={el => (tabs.current[i] = el)}
-                  id={`tab-${i}`}
+                  className={`tabButton ${activatedJob.id === node.id ? 'active' : ''} `}
+                  onClick={() => { setActivatedJob(node) }}
                   role="tab"
-                  tabIndex={activeTabId === i ? '0' : '-1'}
-                  aria-selected={activeTabId === i ? true : false}
-                  aria-controls={`panel-${i}`}>
+                >
                   <span>{company}</span>
                 </button>
               )
@@ -58,44 +54,34 @@ export default function Jobs() {
 
         <div className="tabPanels">
           {jobsData &&
-            jobsData.map((node, i) => {
-              const { title, url, company, range, activities } = node.frontmatter
-              return (
-                <div
-                  key={i}
-                  className="tabPanel"
-                  id={`panel-${i}`}
-                  role="tabpanel"
-                  tabIndex={activeTabId === i ? '0' : '-1'}
-                  aria-labelledby={`tab-${i}`}
-                  aria-hidden={activeTabId !== i}
-                  hidden={activeTabId !== i}>
-                  <h3>
-                    <span>{title}</span>
-                    <span className="company">
-                      &nbsp;@&nbsp;
-                      <a href={url} className="inline-link">
-                        {company}
-                      </a>
-                    </span>
-                  </h3>
+            <div
+              className="tabPanel"
+              role="tabpanel"
+            >
+              <h3>
+                <span>{activatedJob.frontmatter.title}</span>
+                <span className="company">
+                  &nbsp;@&nbsp;
+                  <a href={activatedJob.frontmatter.url} className="inline-link">
+                    {activatedJob.frontmatter.company}
+                  </a>
+                </span>
+              </h3>
 
-                  <p className="range">{range}</p>
+              <p className="range">{activatedJob.frontmatter.range}</p>
 
-                  <div className='activities'>
-                    <ul>
-                      {activities &&
-                        activities.map((act, i) => {
-                          return (
-                            <li key={i}>{act.activity}</li>
-                          )
-                        })
-                      }
-                    </ul>
-                  </div>
-                </div>
-              )
-            })
+              <div className='activities'>
+                <ul>
+                  {activatedJob.frontmatter.activities &&
+                    activatedJob.frontmatter.activities.map((act, i) => {
+                      return (
+                        <li key={i}>{act.activity}</li>
+                      )
+                    })
+                  }
+                </ul>
+              </div>
+            </div>
           }
         </div>
 

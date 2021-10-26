@@ -6,7 +6,7 @@ image: assets/ferrevariedades.jpg
 github: https://github.com/JuanC-JC/FerreDiamante
 external: https://ferrediamante.netlify.app
 tecnologies:
-  - Vanilla JavaScript
+  - VanillaJS
   - Sass
   - Webpack
 ---

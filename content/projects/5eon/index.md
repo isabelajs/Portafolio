@@ -7,7 +7,7 @@ image: assets/5eon.jpg
 github: https://github.com/isabelajs/5EON
 external: https://5eon.netlify.app
 tecnologies:
-  - "Vanilla JavaScript "
-  - Html
+  - VanillaJS
   - Sass
+  - Webpack
 ---

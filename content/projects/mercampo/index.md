@@ -9,4 +9,6 @@ tecnologies:
   - React
   - Redux
   - Firebase
+  - NodeJS
+  - Sass
 ---

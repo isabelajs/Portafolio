@@ -7,7 +7,7 @@ image: assets/tienda.jpg
 github: https://github.com/isabelajs/BOG002-card-validation
 external: https://ijpetshop.netlify.app
 tecnologies:
-  - Vanilla JavaScript
-  - Html
+  - VanillaJS
   - Css
+  - Webpack
 ---
