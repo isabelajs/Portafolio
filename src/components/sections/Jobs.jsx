@@ -26,7 +26,6 @@ export default function Jobs() {
 
 
   const jobsData = [...data.jobs.nodes];
-  console.log(jobsData)
   const [activatedJob, setActivatedJob] = useState(jobsData[0]);
 
   return (
