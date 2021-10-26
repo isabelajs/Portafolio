@@ -12,4 +12,5 @@ tecnologies:
   - VanillaJS
   - Css
   - Webpack
+  - Sass
 ---
