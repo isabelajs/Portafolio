@@ -7,7 +7,8 @@ import '../../styles/components/sections/projects.scss'
 export default function Projects() {
   const data = useStaticQuery(graphql`
     {
-      projects: allMdx(filter: {fileAbsolutePath: {regex: "/projects/"}}) {
+      projects: allMdx(filter: {fileAbsolutePath: {regex: "/projects/"}}
+      sort: {fields: frontmatter___date}) {
         nodes {
           id
           frontmatter {
@@ -26,12 +27,13 @@ export default function Projects() {
             tecnologies
             github
             external
+            mockup
           }
         }
       }
     }
   `)
-  const featuredProjects = data.projects.nodes
+  const featuredProjects = [...data.projects.nodes]
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
 
@@ -44,8 +46,8 @@ export default function Projects() {
 
       <ul className='projectsGrid'>
         {featuredProjects &&
-          featuredProjects.map((node, i) => {
-            const { title, external, github, description, image, tecnologies } = node.frontmatter
+          featuredProjects.reverse().map((node, i) => {
+            const { title, external, github, mockup, description, image, tecnologies } = node.frontmatter
             const img = getImage(image);
 
             return (
@@ -72,6 +74,11 @@ export default function Projects() {
                     {github && (
                       <a target="_blank" rel="noreferrer" href={github} aria-label="GitHub Link">
                         <Icon name="GitHub" />
+                      </a>
+                    )}
+                    {mockup && (
+                      <a target="_blank" href={mockup} rel="noreferrer" aria-label="Mockup Link">
+                        <Icon name="Figma" />
                       </a>
                     )}
                     {external && (

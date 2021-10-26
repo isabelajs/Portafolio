@@ -24,8 +24,10 @@ export default function Jobs() {
     }  
   `);
 
+
   const jobsData = [...data.jobs.nodes];
-  const [activatedJob, setActivatedJob] = useState(0);
+  console.log(jobsData)
+  const [activatedJob, setActivatedJob] = useState(jobsData[0]);
 
   return (
     <section id="jobs" className='jobs'>
