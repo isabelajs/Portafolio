@@ -20,7 +20,9 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: $dark-slate $navy;
+  scroll-behavior: smooth;
 }
+
 body::-webkit-scrollbar {
   width: 12px;
 }

@@ -17,6 +17,7 @@ const Menu = () => {
 
   useOnClickOutside(wrapperRef, (e) => {
     setMenuOpen(false)
+    document.body.classList.remove('blur')
   })
 
   return (
@@ -42,7 +43,7 @@ const Menu = () => {
             <ol>
               {navLinks.map(({ url, name }, i) => (
                 <li key={i}>
-                  <Link to={url} onClick={() => setMenuOpen(false)}>
+                  <Link to={url} onClick={toggleMenu}>
                     {name}
                   </Link>
                 </li>
