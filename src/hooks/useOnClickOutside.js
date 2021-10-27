@@ -33,3 +33,10 @@ const useOnClickOutside = (ref, handler) => {
 };
 
 export default useOnClickOutside;
+
+// const points = [0,0]
+// a.forEach((element,index)=>{
+//     element > b[index] ? points[0]++ : element == b[index] ? null : points[1]++
+// })
+
+// return points
