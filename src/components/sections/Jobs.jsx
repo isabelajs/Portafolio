@@ -63,7 +63,7 @@ export default function Jobs() {
                 <span>{activatedJob.frontmatter.title}</span>
                 <span className="company">
                   &nbsp;@&nbsp;
-                  <a href={activatedJob.frontmatter.url} className="inline-link">
+                  <a href={activatedJob.frontmatter.url} target="_blank" rel='noreferrer' className="inline-link">
                     {activatedJob.frontmatter.company}
                   </a>
                 </span>
