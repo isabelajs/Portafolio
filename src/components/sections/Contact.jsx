@@ -8,7 +8,7 @@ export default function Contact() {
     <section id='contact' ref={revealContainer}>
       <h2 className="numbered-heading overline">¿Qué es lo siguiente?</h2>
 
-      <h2 className="title">Contactame</h2>
+      <h2 className="title">Contáctame</h2>
 
       <p>
         Actualmente estoy buscando nuevas oportunidades y retos, si quieres contactarme mi bandeja de entrada siempre esta disponible.

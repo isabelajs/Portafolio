@@ -8,7 +8,7 @@ export default function About() {
 
   return (
     <section className='aboutSection' id='about' ref={revealContainer}>
-      <h2 className="numbered-heading">Sobre Mi</h2>
+      <h2 className="numbered-heading">Sobre mí</h2>
 
       <div className="inner">
         <div className='styledText'>
@@ -23,12 +23,12 @@ export default function About() {
               creando un ecommerce para mi emprendimiento{' '}
               <a href="https://www.instagram.com/5eonn/" target="_blank" rel="noreferrer" >5EON</a>,{' '}
               desde allí comencé a estudiar apoyándome de plataformas como Platzi y YouTube, además del apoyo de la comunidad. De igual manera,
-              hice parte de carrera de Inteligencia Artificial MinTic-Icetex.
+              hice parte de la carrera de Inteligencia Artificial MinTic-Icetex.
               Esto me ha permitido tener el privilegio de trabajar en equipo como Freelancer para diferentes empresas.
             </p>
 
             <p>
-              Mi enfoque principal en este momento es mejorar mis prácticas de programación de manera que pueda crear
+              Mi enfoque principal en este momento es mejorar mis prácticas de programación de modo que pueda crear
               productos rápidos, accesibles y con excelente experiencia digital para el usuario.
             </p>
 

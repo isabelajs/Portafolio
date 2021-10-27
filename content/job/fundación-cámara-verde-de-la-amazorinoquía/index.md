@@ -7,5 +7,5 @@ url: https://www.instagram.com/fundacioncamaraverde/
 activities:
   - activity:
       Diseño y construcción de un sitio web dinámico, adaptativo y  con un
-      sistema de gestión de contenidos (Netlify CMS)
+      sistema de gestión de contenidos (Netlify CMS).
 ---
